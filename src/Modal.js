@@ -15,7 +15,6 @@ const Papers = () => {
             const response = await axios.get(
                 `https://api.semanticscholar.org/graph/v1/paper/search?query=${cleanedQuery}&offset=100&limit=100`
             );
-
             const data = response.data.data;
             const extractedPapers = data?.map((paper) => ({
                 title: paper.title,
